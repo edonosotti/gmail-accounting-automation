@@ -1,0 +1,33 @@
+{
+  "name": "gmail-accounting-automation",
+  "version": "1.0.0",
+  "description": "Automate accounting from invoices in Gmail, using Apps Script, Google Sheets and optionally BigQuery.",
+  "keywords": [
+    "gmail",
+    "accounting-automation",
+    "expenses-automation",
+    "finances-automation",
+    "apps-script",
+    "google-sheets",
+    "bigquery",
+    "google-api",
+    "google-apis"
+  ],
+  "homepage": "https://github.com/edonosotti/gmail-accounting-automation#readme",
+  "bugs": {
+    "url": "https://github.com/edonosotti/gmail-accounting-automation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edonosotti/gmail-accounting-automation.git"
+  },
+  "license": "MIT",
+  "author": "Edoardo Nosotti",
+  "type": "commonjs",
+  "scripts": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

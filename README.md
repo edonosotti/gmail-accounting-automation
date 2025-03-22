@@ -19,3 +19,17 @@ and build web applications **for free**.
 Resources to get started with Apps Script:
 - [Introductory article](https://medium.com/rockedscience/automate-your-e-mail-calendar-docs-forms-presentations-and-more-with-google-apps-script-b8f8aceebab1?sk=af6b205dc82b4c4723f765ad11f6a47d)
 - [Official website](https://developers.google.com/apps-script)
+
+## Legal
+
+### License
+
+This project is licensed under the MIT License, see the
+[LICENSE](LICENSE) file for details.
+
+### Warranty and disclaimer
+
+As stated in the MIT License attached to this project, this code is
+distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied.
+**USE AT YOUR OWN RISK**.

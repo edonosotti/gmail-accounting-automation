@@ -1,3 +1,6 @@
+[![codebeat badge](https://codebeat.co/badges/fc76b44a-c759-428d-bd8e-77d7c1d72061)](https://codebeat.co/projects/github-com-edonosotti-gmail-accounting-automation-main)
+[![CodeFactor](https://www.codefactor.io/repository/github/edonosotti/gmail-accounting-automation/badge)](https://www.codefactor.io/repository/github/edonosotti/gmail-accounting-automation)
+
 # Gmail automated accounting with Apps Script
 
 _WORK IN PROGRESS_

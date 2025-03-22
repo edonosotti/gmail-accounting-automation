@@ -20,6 +20,30 @@ Resources to get started with Apps Script:
 - [Introductory article](https://medium.com/rockedscience/automate-your-e-mail-calendar-docs-forms-presentations-and-more-with-google-apps-script-b8f8aceebab1?sk=af6b205dc82b4c4723f765ad11f6a47d)
 - [Official website](https://developers.google.com/apps-script)
 
+## Usage
+
+### Configuration
+
+#### Apps Script
+
+When running in Apps Script, this application uses the
+[Properties Service](https://developers.google.com/apps-script/guides/properties)
+to store configuration data.
+
+#### Local environment
+
+When running locally, the application uses environment variables to store
+configuration data in place of the Properties Service.
+Since Properties Service separates Script, User and Document properties
+in different scopes, the following prefixes must be prepended to the names
+of the environment variables to recreate the same behavior:
+
+| PROPERTY SCOPE |    PREFIX     |             EXAMPLE             |
+| -------------- | ------------- | ------------------------------- |
+| Script         | `GAS_SCRIPT_` | `GAS_SCRIPT_MY_SCRIPT_PROP=...` |
+| User           | `GAS_USER_`   | `GAS_USER_MY_USER_PROP=...`     |
+| Document       | `GAS_DOC_`    | `GAS_DOC_MY_DOC_PROP=...`       |
+
 ## Legal
 
 ### License

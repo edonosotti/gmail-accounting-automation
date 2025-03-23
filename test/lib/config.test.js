@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const TEST_SCRIPT_PROP_NAME = `MY_SCRIPT_PROP_${Date.now()}`;
 const TEST_USER_PROP_NAME = `MY_USER_PROP_${Date.now()}`;
 const TEST_DOC_PROP_NAME = `MY_DOC_PROP_${Date.now()}`;

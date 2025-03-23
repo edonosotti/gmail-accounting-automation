@@ -1,12 +1,11 @@
 const logToCloud = (...args) => {
   try {
-    /**
-     * `Logger` is a global object provided by Google Apps Script.
-     * It is used to log messages to the Stackdriver Logging service.
-     * It is only available in the Google Apps Script environment.
-     */
+    // `Logger` is a global object provided by Google Apps Script.
+    // It is used to log messages to the Stackdriver Logging service.
+    // It is only available in the Google Apps Script environment.
+    // eslint-disable-next-line no-undef
     Logger.log(...args);
-  } catch (error) {
+  } catch (_error) {
     // Fallback to `console.log` if `Logger` is not available.
     console.log(...args);
   }

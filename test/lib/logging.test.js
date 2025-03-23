@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const log = jest.spyOn(console, "log").mockImplementation(() => {});
 const info = jest.spyOn(console, "info").mockImplementation(() => {});
 const warn = jest.spyOn(console, "warn").mockImplementation(() => {});

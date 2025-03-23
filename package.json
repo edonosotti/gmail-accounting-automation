@@ -25,7 +25,8 @@
   "author": "Edoardo Nosotti",
   "type": "commonjs",
   "scripts": {
-    "test": "test"
+    "lint": "npx eslint",
+    "test": "npx jest"
   },
   "devDependencies": {
     "@eslint/js": "^9.23.0",

@@ -59,6 +59,29 @@ of the environment variables to recreate the same behavior:
 | User           | `GMAIL_LABEL`           | `GAS_USER_GMAIL_LABEL`           | Label to append to Gmail messages that were already processed. |
 | User           | `PROCESSING_BATCH_SIZE` | `GAS_USER_PROCESSING_BATCH_SIZE` | # of messages per merchant to process at every run.            |
 
+### Running the application
+
+#### Apps Script
+
+Use the `main` function from [`src/main.js`](src/main.js)
+to run the application in Google Apps Script.
+
+#### Local environment
+
+Run:
+
+```bash
+bin/start
+```
+
+or:
+
+```bash
+node bin/start
+```
+
+to run the application standalone as a Node.JS application.
+
 ## Legal
 
 ### License

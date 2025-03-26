@@ -37,8 +37,8 @@ class Parser {
    * Total:  20,00€
    * ```
    * In this case, the total amount is 20,00€.
-   * @param {GMailMessage} message Gmail message object
-   * @param {Function} bodyHandler Function to retrieve the body of the message
+   * @param {GMailMessage} message - Gmail message object
+   * @param {Function} bodyHandler - Function to retrieve the body of the message
    * @return {string | undefined}
    */
   findTotalAmount(message, bodyHandler) {
@@ -56,7 +56,7 @@ class Parser {
    * Simple helper function to parse the purchase date.
    * It assumes the date of the receipt sent via e-mail
    * is the purchase date.
-   * @param {GMailMessage} message Gmail message object
+   * @param {GMailMessage} message - Gmail message object
    * @return {Date}
    */
   findPurchaseDate(message) {
@@ -66,7 +66,7 @@ class Parser {
   /**
    * Sanitizes currency values retrieved from
    * the body of the messages to valid float values.
-   * @param {string} value Currency value
+   * @param {string} value - Currency value
    * @return {string}
    */
   sanitizeFloatString(value) {

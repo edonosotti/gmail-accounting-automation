@@ -1,4 +1,12 @@
 class Config {
+  /**
+   * Returns the value of the script property with the given name.
+   * If the property does not exist, returns the default value.
+   * Script properties are shared across all users of the script.
+   * @param {string} name - The name of the script property
+   * @param {*} defaultValue - The default value (or `undefined` if not provided)
+   * @return {string}
+   */
   getScriptProp(name, defaultValue) {
     try {
       // `PropertiesService` only exists in Google Apps Script runtime environment.
@@ -13,6 +21,14 @@ class Config {
     }
   }
 
+  /**
+   * Returns the value of the user property with the given name.
+   * If the property does not exist, returns the default value.
+   * User properties are specific to the current user of the script.
+   * @param {string} name - The name of the user property
+   * @param {*} defaultValue - The default value (or `undefined` if not provided)
+   * @return {string}
+   */
   getUserProp(name, defaultValue) {
     try {
       // `PropertiesService` only exists in Google Apps Script runtime environment.
@@ -27,6 +43,15 @@ class Config {
     }
   }
 
+  /**
+   * Returns the value of the document property with the given name.
+   * If the property does not exist, returns the default value.
+   * Document properties are specific to the current document in
+   * which the script is running as an extension of the app.
+   * @param {string} name - The name of the document property
+   * @param {*} defaultValue - The default value (or `undefined` if not provided)
+   * @return {string}
+   */
   getDocProp(name, defaultValue) {
     try {
       // `PropertiesService` only exists in Google Apps Script runtime environment.

@@ -15,7 +15,10 @@
  */
 const getDependencies = () => {
   const diContainer = new DependencyContainer();
-  diContainer.register('logging', new Logging());
+  const config = new Config();
+  diContainer.register('config', config);
+  diContainer.register('logging', new Logging(config));
+  return diContainer;
 }
 
 /**

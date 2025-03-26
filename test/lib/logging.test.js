@@ -3,6 +3,7 @@ const log = jest.spyOn(console, "log").mockImplementation(() => {});
 const info = jest.spyOn(console, "info").mockImplementation(() => {});
 const warn = jest.spyOn(console, "warn").mockImplementation(() => {});
 const error = jest.spyOn(console, "error").mockImplementation(() => {});
+const debug = jest.spyOn(console, "debug").mockImplementation(() => {});
 
 const Logging = require("../../src/lib/logging");
 
@@ -12,6 +13,7 @@ describe("lib/logging", () => {
     info.mockClear();
     warn.mockClear();
     error.mockClear();
+    debug.mockClear();
   });
 
   it("should log to console", () => {
@@ -26,7 +28,7 @@ describe("lib/logging", () => {
     expect(info).toBeCalledWith("info");
     expect(warn).toBeCalledWith("warn");
     expect(error).toBeCalledWith("error");
-    expect(log).toBeCalledWith("debug");
+    expect(debug).toBeCalledWith("debug");
   });
 
   it("should log to cloud", () => {

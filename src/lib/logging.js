@@ -1,3 +1,8 @@
+/**
+ * Writes logs using the `Logger` object provided by Google Apps Script
+ * or `console` if `Logger` is not available.
+ * @param  {...any} args - Args to log
+ */
 const logger = (...args) => {
   if (typeof Logger !== "undefined") {
     // `Logger` is a global object provided by Google Apps Script.
@@ -29,6 +34,10 @@ class Logging {
     this.useCloudLogger = config.getUserProp("USE_CLOUD_LOGGER", false);
   }
 
+  /**
+   * Writes a log with a default severity.
+   * @param  {...any} args - Args to log
+   */
   log(...args) {
     if (this.useCloudLogger) {
       logger(...args);
@@ -37,6 +46,11 @@ class Logging {
     }
   }
 
+  /**
+   * Writes a log with `info` severity.
+   * In JavaScript, it's an alias for `log`.
+   * @param  {...any} args - Args to log
+   */
   info(...args) {
     if (this.useCloudLogger) {
       logger(...args);
@@ -45,6 +59,11 @@ class Logging {
     }
   }
 
+  /**
+   * Writes a log with `warning` severity.
+   * In JavaScript, it's an alias for `error`.
+   * @param  {...any} args - Args to log
+   */
   warn(...args) {
     if (this.useCloudLogger) {
       logger(...args);
@@ -53,6 +72,10 @@ class Logging {
     }
   }
 
+  /**
+   * Writes a log with `error` severity.
+   * @param  {...any} args - Args to log
+   */
   error(...args) {
     if (this.useCloudLogger) {
       logger(...args);
@@ -61,9 +84,17 @@ class Logging {
     }
   }
 
+  /**
+   * Writes a log with `debug` severity,
+   * if available in the environment.
+   * Otherwise, it falls back to the default one.
+   * @param  {...any} args - Args to log
+   */
   debug(...args) {
     if (this.useCloudLogger) {
       logger(...args);
+    } else if (typeof console.debug === "function") {
+      console.debug(...args);
     } else {
       // `console.debug` is not available in the Google Apps Script environment.
       console.log(...args);

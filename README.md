@@ -1,6 +1,14 @@
 [![codebeat badge](https://codebeat.co/badges/fc76b44a-c759-428d-bd8e-77d7c1d72061)](https://codebeat.co/projects/github-com-edonosotti-gmail-accounting-automation-main)
 [![CodeFactor badge](https://www.codefactor.io/repository/github/edonosotti/gmail-accounting-automation/badge)](https://www.codefactor.io/repository/github/edonosotti/gmail-accounting-automation)
 [![Codacy badge](https://app.codacy.com/project/badge/Grade/f9f4808a97c24e4dbd1ae98edb0cfb54)](https://app.codacy.com/gh/edonosotti/gmail-accounting-automation/dashboard)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=bugs)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
 
 # Gmail automated accounting with Apps Script
 
@@ -95,3 +103,5 @@ As stated in the MIT License attached to this project, this code is
 distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
 either express or implied.
 **USE AT YOUR OWN RISK**.
+
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-highlight.svg)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)

@@ -1,10 +1,21 @@
 class Database {
+  /**
+   * Constuctor.
+   * @param {BigQuery} bq - BigQuery compatible object
+   * @param {Config} config - Config object
+   * @param {Logging} logging - Logging object
+   */
   constructor(bq, config, logging) {
     this.bq = bq;
     this.config = config;
     this.logging = logging;
   }
 
+  /**
+   * Returns the schema of the expenses table.
+   * @return {object}
+   * @see https://cloud.google.com/bigquery/docs/reference/rest/v2/tables#TableSchema
+   */
   getExpensesTableSchema() {
     return {
       fields: [
@@ -85,10 +96,13 @@ class Database {
 
   /**
    * Creates a new dataset in BigQuery and the expenses table.
+   * @return {Bigquery_v2.Bigquery.V2.Schema.Dataset}
+   * @see https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets?authuser=0#DatasetReference
+   * @see https://cloud.google.com/bigquery/docs/locations?authuser=0
+   * @see https://cloud.google.com/bigquery/docs/labels-intro?authuser=0#requirements
    */
   createAndInitBqDataset() {
       this.logging.info("Creating BigQuery dataset...");
-      // Docs at: https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets?authuser=0#DatasetReference
       const ds = this.bq.Datasets.insert(
         {
           datasetReference: {
@@ -97,10 +111,8 @@ class Database {
           },
           friendlyName: "Accounting",
           description: "Personal accounting dataset",
-          // Docs at: https://cloud.google.com/bigquery/docs/locations?authuser=0
           location: this.config.getBqDatasetLocation(),
           labels: {
-            // Docs at: https://cloud.google.com/bigquery/docs/labels-intro?authuser=0#requirements
             created_by: "apps_script",
           }
         },
@@ -116,6 +128,7 @@ class Database {
   /**
    * Retrieves the dataset from BigQuery, or returns
    * `undefined` if not found.
+   * @return {Bigquery_v2.Bigquery.V2.Schema.Dataset|undefined}
    */
   getBqDataset() {
     try {
@@ -140,6 +153,7 @@ class Database {
 
   /**
    * Writes all the parsed expenses to BigQuery.
+   * @param {object[]} rows - Array of expense records to be inserted
    */
   insertExpenses(rows) {
     this.bq.Tabledata.insertAll(

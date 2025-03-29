@@ -20,10 +20,10 @@ const logger = (...args) => {
  * This wrapper class allows to transparently switch between
  * logging with `console` and the `Logger` object provided by
  * Apps Script. Both will store the logs to Google Cloud Logging,
- * but there are subtle differences between the two. Read the docs at:
- * - https://developers.google.com/apps-script/guides/logging
- * - https://developers.google.com/apps-script/reference/base/logger
- * - https://developers.google.com/apps-script/reference/base/console
+ * but there are subtle differences between the two.
+ * @see https://developers.google.com/apps-script/guides/logging
+ * @see https://developers.google.com/apps-script/reference/base/logger
+ * @see https://developers.google.com/apps-script/reference/base/console
  */
 class Logging {
   /**

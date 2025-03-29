@@ -64,9 +64,12 @@ of the environment variables to recreate the same behavior:
 | User           | `GCP_PROJECT_ID`        | `GAS_USER_GCP_PROJECT_ID`        | ID of the GCP project hosting the app.                         |
 | User           | `BQ_DATASET_ID`         | `GAS_USER_BQ_DATASET_ID`         | ID of the BigQuery Dataset.                                    |
 | User           | `BQ_DATASET_LOCATION`   | `GAS_USER_BQ_DATASET_LOCATION`   | GCP zone of the BigQuery Dataset.                              |
-| User           | `BQ_TABLE_ID`           | `GAS_USER_BQ_TABLE_ID`           | ID of the BigQuery table.                                      |
+| User           | `BQ_TABLE_EXPENSES_ID`  | `GAS_USER_BQ_TABLE_EXPENSES_ID`  | ID of the BigQuery table.                                      |
 | User           | `GMAIL_LABEL`           | `GAS_USER_GMAIL_LABEL`           | Label to append to Gmail messages that were already processed. |
 | User           | `PROCESSING_BATCH_SIZE` | `GAS_USER_PROCESSING_BATCH_SIZE` | # of messages per merchant to process at every run.            |
+
+Some of these settings have default values, as specified in the
+[`src/lib/config.js`](src/lib/config.js) file.
 
 ### Running the application
 

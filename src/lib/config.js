@@ -94,12 +94,12 @@ class Config {
   }
 
   /**
-   * Returns the ID of the BigQuery table to be optionally
+   * Returns the ID of the BigQuery expenses table to be optionally
    * used to store the data.
    * @return {string}
    */
-  getBqTableId() {
-    return this.getUserProp('BQ_TABLE_ID', 'expenses');
+  getBqTableExpensesId() {
+    return this.getUserProp('BQ_TABLE_EXPENSES_ID', 'expenses');
   }
 
   /**

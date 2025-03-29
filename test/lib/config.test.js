@@ -14,13 +14,13 @@ process.env[`GAS_DOC_${TEST_DOC_PROP_NAME}`] = TEST_DOC_PROP_VALUE;
 const TEST_USER_GCP_PROJECT_ID = `VAL_${Math.random() * 1000}`;
 const TEST_USER_BQ_DATASET_ID = `VAL_${Math.random() * 1000}`;
 const TEST_USER_BQ_DATASET_LOCATION = `VAL_${Math.random() * 1000}`;
-const TEST_USER_BQ_TABLE_ID = `VAL_${Math.random() * 1000}`;
+const TEST_USER_BQ_TABLE_EXPENSES_ID = `VAL_${Math.random() * 1000}`;
 const TEST_USER_GMAIL_LABEL = `VAL_${Math.random() * 1000}`;
 const TEST_USER_PROCESSING_BATCH_SIZE = `${Math.floor((Math.random() * 1000) + 1)}`;
 process.env[`GAS_USER_GCP_PROJECT_ID`] = TEST_USER_GCP_PROJECT_ID;
 process.env[`GAS_USER_BQ_DATASET_ID`] = TEST_USER_BQ_DATASET_ID;
 process.env[`GAS_USER_BQ_DATASET_LOCATION`] = TEST_USER_BQ_DATASET_LOCATION;
-process.env[`GAS_USER_BQ_TABLE_ID`] = TEST_USER_BQ_TABLE_ID;
+process.env[`GAS_USER_BQ_TABLE_EXPENSES_ID`] = TEST_USER_BQ_TABLE_EXPENSES_ID;
 process.env[`GAS_USER_GMAIL_LABEL`] = TEST_USER_GMAIL_LABEL;
 process.env[`GAS_USER_PROCESSING_BATCH_SIZE`] = TEST_USER_PROCESSING_BATCH_SIZE;
 
@@ -89,10 +89,10 @@ describe('lib/config', () => {
     });
   });
 
-  describe('getBqTableId', () => {
+  describe('getBqTableExpensesId', () => {
     it('should return the user property BQ_TABLE_ID', () => {
-      const value = config.getBqTableId();
-      expect(value).toBe(TEST_USER_BQ_TABLE_ID);
+      const value = config.getBqTableExpensesId();
+      expect(value).toBe(TEST_USER_BQ_TABLE_EXPENSES_ID);
     });
   });
 

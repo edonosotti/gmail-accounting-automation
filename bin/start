@@ -6,8 +6,11 @@
  */
 
 const DependencyContainer = require("../src/lib/dependencycontainer");
+const Database = require("../src/lib/database");
 const Config = require("../src/lib/config");
 const Logging = require("../src/lib/logging");
+
+const BigQueryStub = require("../src/google/bigquerystub");
 
 /**
  * Returns an instance of the dependency container
@@ -17,8 +20,11 @@ const Logging = require("../src/lib/logging");
 const getDependencies = () => {
   const diContainer = new DependencyContainer();
   const config = new Config();
+  const logging = new Logging(config);
+  const bqStub = new BigQueryStub(config, logging);
   diContainer.register('config', config);
-  diContainer.register('logging', new Logging(config));
+  diContainer.register('logging', logging);
+  diContainer.register('database', new Database(bqStub, config, logging));
   return diContainer;
 }
 

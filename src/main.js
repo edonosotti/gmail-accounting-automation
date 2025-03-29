@@ -16,8 +16,10 @@
 const getDependencies = () => {
   const diContainer = new DependencyContainer();
   const config = new Config();
+  const logging = new Logging(config);
   diContainer.register('config', config);
-  diContainer.register('logging', new Logging(config));
+  diContainer.register('logging',logging);
+  diContainer.register('database', new Database(BigQuery, config, logging));
   return diContainer;
 }
 

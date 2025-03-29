@@ -20,6 +20,7 @@ const getDependencies = () => {
   diContainer.register('config', config);
   diContainer.register('logging',logging);
   diContainer.register('database', new Database(BigQuery, config, logging));
+  diContainer.register('inbox', new Inbox(GMailApp, config, logging));
   return diContainer;
 }
 

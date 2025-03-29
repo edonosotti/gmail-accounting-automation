@@ -7,10 +7,12 @@
 
 const DependencyContainer = require("../src/lib/dependencycontainer");
 const Database = require("../src/lib/database");
+const Inbox = require("../src/lib/inbox");
 const Config = require("../src/lib/config");
 const Logging = require("../src/lib/logging");
 
 const BigQueryStub = require("../src/google/bigquerystub");
+const GMailAppStub = require("../src/google/gmailappstub");
 
 /**
  * Returns an instance of the dependency container
@@ -22,9 +24,11 @@ const getDependencies = () => {
   const config = new Config();
   const logging = new Logging(config);
   const bqStub = new BigQueryStub(config, logging);
+  const gmailStub = new GMailAppStub(config, logging);
   diContainer.register('config', config);
   diContainer.register('logging', logging);
   diContainer.register('database', new Database(bqStub, config, logging));
+  diContainer.register('inbox', new Inbox(gmailStub, config, logging));
   return diContainer;
 }
 

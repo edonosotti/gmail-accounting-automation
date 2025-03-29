@@ -28,7 +28,7 @@ const logger = (...args) => {
 class Logging {
   /**
    * Constructor
-   * @param {Config} config Config reader object
+   * @param {Config} config - Config reader object
    */
   constructor(config) {
     this.useCloudLogger = config.getUserProp("USE_CLOUD_LOGGER", false);

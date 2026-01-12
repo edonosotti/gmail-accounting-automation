@@ -1,4 +1,3 @@
-[![codebeat badge](https://codebeat.co/badges/fc76b44a-c759-428d-bd8e-77d7c1d72061)](https://codebeat.co/projects/github-com-edonosotti-gmail-accounting-automation-main)
 [![CodeFactor badge](https://www.codefactor.io/repository/github/edonosotti/gmail-accounting-automation/badge)](https://www.codefactor.io/repository/github/edonosotti/gmail-accounting-automation)
 [![Codacy badge](https://app.codacy.com/project/badge/Grade/f9f4808a97c24e4dbd1ae98edb0cfb54)](https://app.codacy.com/gh/edonosotti/gmail-accounting-automation/dashboard)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=edonosotti_gmail-accounting-automation&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=edonosotti_gmail-accounting-automation)
